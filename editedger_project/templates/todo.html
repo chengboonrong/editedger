@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo App</title>
+</head>
+<body>
+	<div class="container">
+		<a href="/">
+            <h1 class="title"> My Todo List </h1>
+		</a>
+    </div>
+	{% for todo_item in all_items %}
+	<ul>
+		<il>{{ todo_item.content }}
+			<form action="/deleteTodo/{{ todo_item.id }}" 
+				  style="display: inline" 
+				  method="post"> {% csrf_token %}
+				<input type="submit" value="Delete"/>
+			</form>
+		</il>
+	</ul>
+	{% endfor %}
+
+	<form action="/addtodo/" method="post">{% csrf_token %}
+		<input type="text" name="content"/>
+		<input type="submit" value="Add"/>
+	</form>
+
+</body>
+</html>
