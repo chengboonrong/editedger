@@ -25,7 +25,7 @@ SECRET_KEY = 's#f$z$mdayag*=@4v6nxt!wj8_itr_=ivm3%f+1hz$&u+)kxdr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['edger7chris.pythonanywhere.com']
 
 STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static'),
