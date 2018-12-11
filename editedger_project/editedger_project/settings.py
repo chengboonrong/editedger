@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['edger7chris.pythonanywhere.com']
 
-STATICFILES_DIRS = (
+STATIC_ROOT = (
   os.path.join(BASE_DIR, 'static'),
 )
 
